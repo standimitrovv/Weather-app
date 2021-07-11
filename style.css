@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #222e50;
+  --capital: #f3752b;
+}
+body {
+  font-family: sans-serif;
+  font-weight: 500;
+  background: var(--bg);
+  padding: 5rem;
+}
+
+.app__title {
+  color: white;
+  font-weight: 900;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.search__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.search__field {
+  padding: 1rem;
+  background: var(--bg);
+  border: none;
+  border-bottom: 3px solid white;
+  font-size: 2rem;
+  color: white;
+}
+
+.search__field::placeholder {
+  font-size: 1.8rem;
+  color: darkgray;
+}
+
+.search__field:focus {
+  outline: none;
+}
+
+.search__btn-submit {
+  border: none;
+  color: white;
+  background: red;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.search__results-container {
+  margin-top: 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3rem;
+  list-style: none;
+}
+
+.city-1 {
+  background: white;
+  border-radius: 1.4rem;
+  padding: 2.5rem 3.5rem;
+  height: 37rem;
+}
+
+.city__title {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.city__title-city {
+  font-size: 2.5rem;
+  color: darkgray;
+}
+
+.city__title-capital {
+  border-radius: 2rem;
+  width: 4rem;
+  height: 2rem;
+  background: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  padding: 0.2rem 0.3rem;
+  transform: translateY(-40%);
+}
+
+.city__temperature {
+  margin: 3rem 0 2rem 0;
+}
+
+.city__temperature-digits {
+  font-size: 5.5rem;
+}
+
+.city__temperature-mm {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+.city__temperature-min {
+  border-right: 1px solid gray;
+  padding: 0.7rem;
+}
+.city__temperature-max {
+  padding: 0.5rem;
+}
+
+.city-description {
+  margin: 2rem 0;
+}
+.city-icon {
+  width: 40%;
+}
+.city-temp-description {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.overlay {
+  /* background-color: rgba(black, black, black, 0.8);
+   */
+  background: #9fc2cc;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.fetch-error {
+  position: fixed;
+  z-index: 120;
+  background: white;
+  width: 50rem;
+  height: 30rem;
+  border-radius: 1rem;
+  top: 30%;
+  left: 32%;
+  color: black;
+  padding: 10rem;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.error-message-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3px;
+  background: green;
+  color: white;
+  font-size: 2.2rem;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  font-weight: 500;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: none;
+}
