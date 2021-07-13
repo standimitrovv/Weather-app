@@ -70,7 +70,7 @@ const renderError = function () {
 
 // OLD WAY
 // const Ajax = function (country) {
-//   const apiKey = `dc80cf78e7f62beeb3c2d4a3496bf92e`;
+//   const apiKey = `YOUR API KEY GOES HERE`; //openweathermap.org is where you can get your key
 
 //   fetch(
 //     `https://api.openweathermap.org/data/2.5/weather?q=${country}&units=metric&appid=${apiKey}`
@@ -85,7 +85,7 @@ const renderError = function () {
 // NEW WAY
 const Ajax = async function (country) {
   try {
-    const apiKey = `dc80cf78e7f62beeb3c2d4a3496bf92e`;
+    const apiKey = `YOUR API KEY GOES HERE`; //openweathermap.org is where you can get your key
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${country}&units=metric&appid=${apiKey}`
     );
